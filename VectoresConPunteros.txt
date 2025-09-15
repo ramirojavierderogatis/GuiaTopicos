@@ -1,0 +1,19 @@
+void insertar_elemento(int *vec, int pos, int elemento) {
+    *(vec + pos) = elemento;
+}
+
+
+void insertar_elemento_Ordenado(int* vec, int elemento) {
+    int*ini=vec;
+    int tam=0;
+
+    while (*vec!=-1){   
+    vec++;
+   }
+    //int* finvec = vec + tam - 1;
+    while (vec >=ini&&*vec>elemento) {
+        *(vec + 1) = *vec;
+        vec--;
+    }
+    *(vec + 1) = elemento;
+}
